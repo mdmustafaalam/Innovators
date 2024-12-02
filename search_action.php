@@ -3,7 +3,7 @@
   require './components/head.php';
   $id=mysqli_real_escape_string($conn,$_GET['search_input']);
 ?>
-<title>Service Option - Find Your Needed Services</title>
+<title>Service - Find Your Services</title>
 </head>
 
 <body>

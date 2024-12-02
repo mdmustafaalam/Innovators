@@ -2,7 +2,7 @@
 ?>
 <?php $page = 'service';
 require './components/head.php' ?>
-<title>Home - Find Your Needed Services</title>
+<title>Service - Find Your Services</title>
 </head>
 
 <body>

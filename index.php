@@ -2,7 +2,7 @@
 $page = 'home';
 require './components/head.php';
 ?>
-<title>Home - Find Your Needed Services</title>
+<title>The Innovator's</title>
 </head>
 
 <body>
