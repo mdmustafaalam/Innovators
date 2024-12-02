@@ -732,7 +732,7 @@
     background: linear-gradient(rgb(0, 0, 0), rgb(24, 22, 0));
     background-size: cover;
     color: rgba(255, 255, 255, .7);
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .footer-item,
@@ -760,4 +760,6 @@
     justify-content: center;
 }
 
-/*** Copywright End ***/
+.footer .colloer-cng{
+    color: #fff700;
+}

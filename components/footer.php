@@ -4,9 +4,11 @@
         <div class="row g-4 footer-inner">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-item">
-                    <h4 class="text-white fw-bold mb-4">About SimpleSolveHub</h4>
+                    <h4 class="text-white fw-bold mb-4">
+                        The<span class="colloer-cng">Innovators</span>
+                    </h4>
                     <p>Our WebSite One Step Solution Provides the Best Services and Solution for Everyone. We Provide
-                        Experienced and Certified Provider for all type of Services. We provide service provider in time
+                        Exherienced and Certified Provider for all type of Services. We provide service provider in time
                         and our web site is the best website in the world.</p>
                 </div>
             </div>
@@ -49,7 +51,8 @@
                             class="fa fa-map-marker-alt me-3"></i>Kolkata, India</a>
                     <a href="tel:+918927254686" class="btn btn-link w-100 text-start ps-0 py-3 rounded-0"><i
                             class="fa fa-phone-alt me-3"></i>+918927254686</a>
-                    <a href="mailto:mustafaalam3240@gmail.com" class="btn btn-link w-100 text-start ps-0 py-3 rounded-0"><i
+                    <a href="mailto:mustafaalam3240@gmail.com"
+                        class="btn btn-link w-100 text-start ps-0 py-3 rounded-0"><i
                             class="fa fa-envelope me-3"></i>mustafaalam3240@gmail.com</a>
                 </div>
             </div>
