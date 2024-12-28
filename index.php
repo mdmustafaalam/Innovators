@@ -201,46 +201,40 @@ require './components/head.php';
 
 
     <!-- Blog Start -->
-    <!-- <div class="container-fluid py-5">
-        <div class="container py-5">
+    <div class="container-fluid py-5">
+        <div class="container blog-flex py-5">
             <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
-                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Our Blog</h5>
+                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Our Blog
+                </h5>
                 <h1 class="display-5">Latest Blog & News</h1>
             </div>
-            <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay=".5s">
-                <?php
-                $sql = "SELECT * FROM `blog` WHERE status='On' order by id desc LIMIT 5";
-                $data = mysqli_query($conn, $sql);
-                $i = 1;
-                while ($result = mysqli_fetch_assoc($data)) {
-                    ?>
+            <div class="owl-carousel blog-carousel wow fadeInUp col-md-4" data-wow-delay=".5s">
                 <div class="blog-item">
-                    <img src="Admin/<?php echo $result['blog_image'] ?>" class="img-fluid w-100 rounded-top" alt="">
-                        <div class="rounded-bottom bg-light">
+                    <img src="./img/farmer.jpg" class="img-fluid w-100 rounded-top" alt="">
+                    <div class="rounded-bottom bg-light">
                         <div class="d-flex justify-content-between p-4 pb-2">
                             <span class="pe-2 text-dark"><i class="fa fa-user me-2"></i>By Admin</span>
-                            <span class="text-dark"><i class="fas fa-calendar-alt me-2"></i><?php echo $result['publish_date'] ?></span>
+                            <span class="text-dark"><i class="fas fa-calendar-alt me-2"></i>12/12/2005</span>
                         </div>
                         <div class="px-4 pb-0">
-                            <h4><?php echo $result['blog_title'] ?></h4>
-                            <p><?php echo $result['blog_content'] ?></p>
+                            <h4>New Blog</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe minima iure natus!
+                                Impedit quos possimus quae eligendi ducimus culpa repudiandae!</p>
                         </div>
                         <div class="p-4 py-2 d-flex justify-content-between bg-light rounded-bottom blog-btn">
-                            <a href="./blog_view.php?id=<?php echo $result['id'] ?>" type="button" class="btn btn-primary border-0">Read More</a>
+                            <a href="#!" type="button"
+                                class="btn btn-primary border-0">Read More</a>
                             <a href="#" class="my-auto text-dark"><i class="fa fa-comments me-2"></i>23 Comments</a>
                         </div>
                     </div>
                 </div>
-                <?php
-                }
-                ?>
-                
             </div>
             <a href="./blog.php" class="d-block text-end">
-                <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-4 wow fadeInUp" data-wow-delay=".3s">More Blogs</button>
+                <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-4 wow fadeInUp"
+                    data-wow-delay=".3s">More Blogs</button>
             </a>
         </div>
-    </div> -->
+    </div>
     <!-- Blog End -->
 
     <!-- Testiminial Start -->
@@ -293,8 +287,7 @@ require './components/head.php';
         </div>
     </div>
     <!-- Testimonial End -->
-    0
-
+    
     <!-- Contact Start -->
     <div class="container-fluid py-5 pb-0">
         <div class="container py-5 pb-0">

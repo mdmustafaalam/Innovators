@@ -23,6 +23,9 @@ require './components/head.php' ?>
 
     <!-- pricing Start -->
     <div class="container mt-5">
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+            <h1 class="display-5 w-50 mx-auto">Login</h1>
+        </div>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
@@ -30,7 +33,7 @@ require './components/head.php' ?>
                     <div class="card-body">
                         <form>
                             <div class="form-group mb-3">
-                                <label for="email">Username(Email or Phone Number)</label>
+                                <label for="email">Username</label>
                                 <input type="email" class="form-control" id="email" placeholder="Enter your email">
                             </div>
 
@@ -48,14 +51,9 @@ require './components/head.php' ?>
     </div>
     <!-- Pricing End -->
 
-
-    <!-- Footer Start -->
-
-
     <?php require './components/footer.php' ?>
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
-
 
     <?php require './components/scripts.php' ?>
 </body>
