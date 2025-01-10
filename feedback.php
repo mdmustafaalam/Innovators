@@ -1,6 +1,10 @@
 <?php
+include('./config/db_con.php');
 $page = 'feedback';
-require './components/head.php'; ?>
+require './components/head.php';
+$sql = mysqli_query($conn, "SELECT * from banner where status='0'");
+$data = mysqli_fetch_assoc($sql);
+?>
 <title>Feedback</title>
 </head>
 

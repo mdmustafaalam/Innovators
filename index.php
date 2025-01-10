@@ -1,6 +1,9 @@
 <?php
+include('./config/db_con.php');
 $page = 'home';
 require './components/head.php';
+$sql = mysqli_query($conn, "SELECT * from banner where status='0'");
+$data = mysqli_fetch_assoc($sql);
 ?>
 <title>The Innovator's</title>
 </head>
@@ -222,8 +225,7 @@ require './components/head.php';
                                 Impedit quos possimus quae eligendi ducimus culpa repudiandae!</p>
                         </div>
                         <div class="p-4 py-2 d-flex justify-content-between bg-light rounded-bottom blog-btn">
-                            <a href="#!" type="button"
-                                class="btn btn-primary border-0">Read More</a>
+                            <a href="#!" type="button" class="btn btn-primary border-0">Read More</a>
                             <a href="#" class="my-auto text-dark"><i class="fa fa-comments me-2"></i>23 Comments</a>
                         </div>
                     </div>
@@ -281,13 +283,11 @@ require './components/head.php';
                     <?php
                 }
                 ?>
-
-
             </div>
         </div>
     </div>
     <!-- Testimonial End -->
-    
+
     <!-- Contact Start -->
     <div class="container-fluid py-5 pb-0">
         <div class="container py-5 pb-0">
