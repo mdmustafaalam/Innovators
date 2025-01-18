@@ -140,6 +140,8 @@ require './components/head.php' ?>
     <!-- Contact End -->
 
 
+
+
     <?php require './components/footer.php' ?>
 
     <!-- Back to Top -->
