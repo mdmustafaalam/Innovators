@@ -23,33 +23,41 @@ require './components/head.php' ?>
 
     <!-- pricing Start -->
     <div class="container mt-5">
-        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
-            <h1 class="display-5 w-50 mx-auto">Login</h1>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Login Form</div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group mb-3">
-                                <label for="email">Username</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                            </div>
+    <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+        <h1 class="display-5 w-50 mx-auto">Login</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Login Form</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="email">Username</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
 
-                            <div class="form-group mb-3">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password"
-                                    placeholder="Enter your password">
-                            </div>
+                        <div class="form-group mb-3">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
                             <button type="submit" class="btn btn-primary">Login</button>
-                        </form>
-                    </div>
+                            <a href="./forgot-password.php" class="text-decoration-none text-primary">Forgot Password?</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- Pricing End -->
+
+    <script>
+        
+    </script>
 
     <?php require './components/footer.php' ?>
     <!-- Back to Top -->
