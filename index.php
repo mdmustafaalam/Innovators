@@ -7,6 +7,9 @@ require './components/head.php';
 </head>
 
 <body>
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" class="position-fixed top-0 end-0 p-2"></div>
+
     <!-- Spinner Start -->
     <div id="spinner"
         class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
@@ -59,7 +62,7 @@ require './components/head.php';
                             </div>
                         </div>
                         <h5 class="mb-3">Selling Crops</h5>
-                        <a href="./popular_service_option.php">
+                        <a href="./cropsService.php">
                             <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
                         </a>
                     </div>
@@ -197,10 +200,13 @@ require './components/head.php';
         </div>
     </div>
     <!-- About End -->
-
-
-
-
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <marquee class="marquee-text pt-3 pb-3">Potato: 20rs Rice: 30rs Wheat: 20rs Corn: 10rs Onion: 40rs
+                Garlic: 50rs Mustard: 70rs Potato: 20rs Rice: 30rs Wheat: 20rs Corn: 10rs Onion: 40rs
+                Garlic: 50rs Mustard: 70rs</marquee>
+        </div>
+    </div>
     <!-- Blog Start -->
     <div class="container-fluid py-5">
         <div class="container blog-flex py-5">
