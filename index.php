@@ -2,8 +2,6 @@
 include('./config/db_con.php');
 $page = 'home';
 require './components/head.php';
-$sql = mysqli_query($conn, "SELECT * from banner where status='0'");
-$data = mysqli_fetch_assoc($sql);
 ?>
 <title>The Innovator's</title>
 </head>
