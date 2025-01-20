@@ -213,7 +213,7 @@ $data = mysqli_fetch_assoc($sql);
             </div>
             <div class="owl-carousel blog-carousel wow fadeInUp col-md-4" data-wow-delay=".5s">
                 <div class="blog-item">
-                    <img src="./img/farmer.jpg" class="img-fluid w-100 rounded-top" alt="">
+                    <!-- <img src="./img/farmer.jpg" class="img-fluid w-100 rounded-top" alt=""> -->
                     <div class="rounded-bottom bg-light">
                         <div class="d-flex justify-content-between p-4 pb-2">
                             <span class="pe-2 text-dark"><i class="fa fa-user me-2"></i>By Admin</span>
