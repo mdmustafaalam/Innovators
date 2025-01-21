@@ -12,20 +12,17 @@
                 <div class="navbar-nav ms-auto">
                     <a href="index.php" class="nav-item nav-link <?php if ($page == 'home')
                         echo 'active' ?>">Home</a>
-                        <a href="service.php"
-                            class="nav-item nav-link <?php if ($page == 'service')
+                        <a href="service.php" class="nav-item nav-link <?php if ($page == 'service')
                         echo 'active' ?>">Services</a>
                         <!-- <a href="blog.php" class="nav-item nav-link <?php if ($page == 'blog')
                         echo 'active' ?>">Blog</a> -->
-                        <a href="contact.php"
-                            class="nav-item nav-link <?php if ($page == 'contact')
+                        <a href="contact.php" class="nav-item nav-link <?php if ($page == 'contact')
                         echo 'active' ?>">Contact</a>
                         <a href="about.php" class="nav-item nav-link <?php if ($page == 'about')
                         echo 'active' ?>">About</a>
                         <a href="faq.php" class="nav-item nav-link <?php if ($page == 'faq')
                         echo 'active' ?>">FAQ</a>
-                        <a href="feedback.php"
-                            class="nav-item nav-link <?php if ($page == 'feedback')
+                        <a href="feedback.php" class="nav-item nav-link <?php if ($page == 'feedback')
                         echo 'active' ?>">Feedback</a>
                     </div>
                 </div>
