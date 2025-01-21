@@ -131,7 +131,7 @@ require './components/head.php';
         <!-- Images -->
         <div class="mb-3">
           <label for="images" class="form-label">Images</label>
-          <input type="file" class="form-control" id="images" name="images" multiple>
+          <input type="file" class="form-control" id="image" name="image" multiple>
           <small class="text-muted">You can upload multiple images.</small>
         </div>
 
@@ -146,30 +146,51 @@ require './components/head.php';
 
 
   <script>
-   document.getElementById("cropForm").addEventListener("submit", async (e) => {
+document.getElementById("cropForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
 
     try {
-        const response = await fetch("http://localhost:8080/api/v1/crops/add-crops", {
-            method: "POST",
-            body: formData,
-            credentials: "include", // Include cookies with the request
-        });
+    // Retrieve the accessToken from localStorage
+    const accessToken = localStorage.getItem("accessToken");
 
-        const result = await response.json();
-
-        if (response.ok) {
-            alert("Crop added successfully!");
-        } else {
-            alert(result.message || "Failed to add crop.");
-        }
-    } catch (error) {
-        alert("An error occurred while adding the crop.");
-        console.error(error);
+    // Check if accessToken exists
+    if (!accessToken) {
+        // If no token is found, redirect to login page or show an error
+        alert("Please log in to add a crop.");
+        window.location.href = "./login.php";  // Replace with your login page URL
+        return;  // Stop further execution
     }
+
+    // Send a POST request to add the crop with the accessToken in the Authorization header
+    const response = await fetch("http://localhost:8080/api/v1/crops/add-crops", {
+        method: "POST",
+        headers: {
+            "Authorization": `Bearer ${accessToken}`,  // Add the access token here
+        },
+        body: formData,  // Assuming `formData` is already prepared
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+        // Handle success - Crop added successfully
+        alert("Crop added successfully!");
+        // Reset the form fields after successful submission
+        document.getElementById("cropForm").reset();
+    } else {
+        // Handle failure - Error message from the API
+        alert(result.message || "Failed to add crop.");
+    }
+} catch (error) {
+    // Catch any other errors (e.g., network issues, etc.)
+    alert("An error occurred while adding the crop.");
+    console.error(error);
+}
 });
+
+
 
 
     

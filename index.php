@@ -327,7 +327,20 @@ require './components/head.php';
     </div>
     <!-- Contact End -->
 
+    <script>
+    // Check if accessToken exists in localStorage
+    const accessToken = localStorage.getItem("accessToken");
 
+    // If accessToken exists, show Profile link and hide Login link
+    if (accessToken) {
+        document.getElementById("profileLink").style.display = "flex";
+        document.getElementById("loginLink").style.display = "none";
+    } else {
+        // If no accessToken, show Login link and hide Profile link
+        document.getElementById("loginLink").style.display = "flex";
+        document.getElementById("profileLink").style.display = "none";
+    }
+</script>
 
     <?php require './components/footer.php' ?>
 

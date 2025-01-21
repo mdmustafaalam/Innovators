@@ -20,11 +20,20 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center topbar-icon">
-                <a href="./paid_register.php" class="me-4 text-dark d-flex gap-2 align-items-center"><i
-                        class="fa-solid fa-user-plus"></i> Register</a>
-                <a href="./login.php" class="me-4 text-dark d-flex gap-2 align-items-center"><i
-                        class="fa-solid fa-right-to-bracket"></i> Login</a>
-            </div>
+    <!-- Register Link -->
+    <a href="./paid_register.php" class="me-4 text-dark d-flex gap-2 align-items-center">
+        <i class="fa-solid fa-user-plus"></i> Register
+    </a>
+
+    <!-- Login Link (Visible if user is NOT logged in) -->
+    <a id="loginLink" href="./login.php" class="me-4 text-dark d-flex gap-2 align-items-center" style="display:none;">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+    </a>
+
+    <!-- Profile Link (Visible if user is logged in) -->
+    
+</div>
+
             <div class="d-flex align-items-center justify-content-center topbar-icon">
                 <div id="google_translate_element" class="translate-widget top-0 end-0 p-2"></div>
             </div>

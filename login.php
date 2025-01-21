@@ -56,7 +56,7 @@ require './components/head.php' ?>
     <!-- Pricing End -->
 
     <script>
-       document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();  // Prevent default form submission
 
     const email = document.getElementById("email").value;
@@ -73,16 +73,18 @@ require './components/head.php' ?>
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ email, password }),
+            // Remove credentials: 'include' since we're not using cookies
         });
 
         const result = await response.json();
-        
+
         if (response.ok) {
-            // Store user info in localStorage
+            // Store user info and accessToken in localStorage
             localStorage.setItem("user", JSON.stringify(result.data.user));
+            localStorage.setItem("accessToken", result.data.accessToken);  // Store accessToken
 
             // Redirect to a protected route or home page
-            window.location.href = "./service.php";  // Adjust as needed
+            window.location.href = "./profile.php";  // Adjust as needed
         } else {
             // Show the error message to the user
             alert(result.message || "Login failed. Please try again.");
@@ -94,6 +96,7 @@ require './components/head.php' ?>
         loginButton.disabled = false; // Re-enable the login button
     }
 });
+
 
     </script>
 
