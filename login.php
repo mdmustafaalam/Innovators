@@ -31,7 +31,7 @@ require './components/head.php' ?>
             <div class="card">
                 <div class="card-header">Login Form</div>
                 <div class="card-body">
-                    <form>
+                    <form id = "loginForm">
                         <div class="form-group mb-3">
                             <label for="email">Username</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter your email">
@@ -56,7 +56,50 @@ require './components/head.php' ?>
     <!-- Pricing End -->
 
     <script>
+       document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();  // Prevent default form submission
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const loginButton = e.target.querySelector("button[type='submit']");
+    loginButton.disabled = true; // Disable button to prevent multiple submissions
+
+    try {
+        // Send a POST request to the login endpoint
+        const response = await fetch("http://localhost:8080/api/v1/users/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+        const result = await response.json();
         
+        if (response.ok) {
+            // Store user info in localStorage
+            localStorage.setItem("user", JSON.stringify(result.data.user));
+
+            // Redirect to a protected route or home page
+            window.location.href = "./service.php";  // Adjust as needed
+        } else {
+            // Show the error message to the user
+            alert(result.message || "Login failed. Please try again.");
+        }
+    } catch (error) {
+        alert("An error occurred. Please try again.");
+        console.error("Error during login:", error);
+    } finally {
+        loginButton.disabled = false; // Re-enable the login button
+    }
+});
+
+    </script>
+
+
+
+
     </script>
 
     <?php require './components/footer.php' ?>

@@ -1,5 +1,5 @@
 <?php
-include('./config/db_con.php');
+
 $page = 'home';
 require './components/head.php';
 ?>
@@ -246,14 +246,7 @@ require './components/head.php';
                 <h1 class="display-5 w-50 mx-auto">What Clients Say About Our Services</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay=".5s">
-                <?php
-                // Fetch data from your database and populate the table here
-                // Example:
-                $sql = "SELECT * FROM `feedback` order by id desc";
-                $data = mysqli_query($conn, $sql);
-                $i = 1;
-                while ($result = mysqli_fetch_assoc($data)) {
-                    ?>
+               
                     <div class="testimonial-item">
                         <div class="testimonial-content rounded mb-4 p-4">
                             <p class="fs-5 m-0"><?php echo $result['feedback_title'] ?></p>
@@ -279,7 +272,7 @@ require './components/head.php';
                         </div>
                     </div>
                     <?php
-                }
+                
                 ?>
             </div>
         </div>
