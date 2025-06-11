@@ -1,9 +1,6 @@
 <?php
-include('./config/db_con.php');
 $page = 'feedback';
 require './components/head.php';
-$sql = mysqli_query($conn, "SELECT * from banner where status='0'");
-$data = mysqli_fetch_assoc($sql);
 ?>
 <title>Feedback</title>
 </head>
@@ -24,7 +21,6 @@ $data = mysqli_fetch_assoc($sql);
     <?php require './components/navbar.php' ?>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
     <div class="container-fluid page-header feedback-img py-5">
         <div class="container text-center py-5">
@@ -39,12 +35,10 @@ $data = mysqli_fetch_assoc($sql);
     </div>
     <!-- Page Header End -->
 
-
     <!-- Feedback Start -->
     <div class="container-fluid py-5 pb-0">
         <div class="container py-5 pb-0">
             <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
-                <!-- <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Give your valuable feedback</h5> -->
                 <h1 class="display-5 w-50 mx-auto">Give your valuable feedback</h1>
             </div>
             <div class="row g-5 mb-5">
@@ -77,64 +71,56 @@ $data = mysqli_fetch_assoc($sql);
                             <input type="submit" name="submit" value="Send Feedback" class="btn btn-primary px-5">
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Feedback Form End -->
+
+    <!-- Feedback Testimonials Start -->
     <div class="container-fluid testimonial py-5 bg-light" id="feedback">
         <div class="container py-5">
             <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
-                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Feedback
-                </h5>
+                <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Feedback</h5>
                 <h1 class="display-5 w-50 mx-auto">What Clients Say About Our Services</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay=".5s">
-                <?php
-                // Fetch data from your database and populate the table here
-                // Example:
-                $sql = "SELECT * FROM `feedback` order by id desc";
-                $data = mysqli_query($conn, $sql);
-                $i = 1;
-                while ($result = mysqli_fetch_assoc($data)) {
-                    ?>
-                    <div class="testimonial-item">
-                        <div class="testimonial-content rounded mb-4 p-4">
-                            <p class="fs-5 m-0"><?php echo $result['feedback_title'] ?></p>
-                        </div>
-                        <div class="d-flex align-items-center  mb-4" style="padding: 0 0 0 25px;">
-                            <div class="position-relative">
-                                <img src="img/feedback/feedback1.jpg" class="img-fluid rounded-circle py-2" alt="">
-                                <div class="position-absolute" style="top: 33px; left: -25px;">
-                                    <i class="fa fa-quote-left rounded-pill bg-primary text-dark p-3"></i>
-                                </div>
+                <!-- Static Feedback Item -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content rounded mb-4 p-4">
+                        <p class="fs-5 m-0">"Excellent service, very helpful team!"</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-4" style="padding: 0 0 0 25px;">
+                        <div class="position-relative">
+                            <img src="img/feedback/feedback1.jpg" class="img-fluid rounded-circle py-2" alt="">
+                            <div class="position-absolute" style="top: 33px; left: -25px;">
+                                <i class="fa fa-quote-left rounded-pill bg-primary text-dark p-3"></i>
                             </div>
-                            <div class="ms-3">
-                                <h4 class="mb-0"><?php echo $result['username'] ?></h4>
-                                <p class="mb-1"><?php echo $result['feedback_details'] ?></p>
-                                <div class="d-flex">
-                                    <small class="fas fa-star text-primary me-1"></small>
-                                    <small class="fas fa-star text-primary me-1"></small>
-                                    <small class="fas fa-star text-primary me-1"></small>
-                                    <small class="fas fa-star text-primary me-1"></small>
-                                    <small class="fas fa-star text-primary me-1"></small>
-                                </div>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="mb-0">John Doe</h4>
+                            <p class="mb-1">Very satisfied with the service and support.</p>
+                            <div class="d-flex">
+                                <small class="fas fa-star text-primary me-1"></small>
+                                <small class="fas fa-star text-primary me-1"></small>
+                                <small class="fas fa-star text-primary me-1"></small>
+                                <small class="fas fa-star text-primary me-1"></small>
+                                <small class="fas fa-star text-primary me-1"></small>
                             </div>
                         </div>
                     </div>
-                    <?php
-                }
-                ?>
+                </div>
+
+                <!-- Add more static feedbacks below if needed -->
             </div>
         </div>
     </div>
+    <!-- Feedback Testimonials End -->
 
     <?php require './components/footer.php' ?>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
-
 
     <?php require './components/scripts.php' ?>
 </body>

@@ -43,7 +43,7 @@ require './components/head.php' ?>
                     <div class="about-img">
                         <div class="rotate-left bg-dark"></div>
                         <div class="rotate-right bg-dark"></div>
-                        <img src="img/farmer.png" class="img-fluid h-100" alt="img">
+                        <img src="img/farmer.jpg" class="img-fluid h-100" alt="img">
                         <div class="bg-dark experiences">
                             <h1 class="display-3 text-primary">Get</h1>
                             <h5 class="fw-bold text-light">500+ Service</h5>
