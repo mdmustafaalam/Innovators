@@ -103,7 +103,7 @@ require './components/head.php' ?>
                                 <img src="./img/service/s1.jpg" class="service_img" alt="">
                             </div>
                         </div>
-                        <h5 class="mb-3">Selling Crops</h5>
+                        <h5 class="mb-3">Weather Forecast</h5>
                         <a href="./popular_service_option.php">
                             <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
                         </a>
