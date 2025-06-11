@@ -62,7 +62,20 @@ require './components/head.php';
                             </div>
                         </div>
                         <h5 class="mb-3">Selling Crops</h5>
-                        <a href="./cropsService.php">
+                        <a href="./popular_service_option.php">
+                            <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="bg-light services-item p-2">
+                        <div class="d-flex" style="align-items: center; justify-content: center;">
+                            <div class="mb-4 services-inner-icon p-1">
+                                <img src="./img/service/ss1.jpg" class="service_img" alt="">
+                            </div>
+                        </div>
+                        <h5 class="mb-3">Buying Crops</h5>
+                        <a href="./buying.php">
                             <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
                         </a>
                     </div>
@@ -75,19 +88,6 @@ require './components/head.php';
                             </div>
                         </div>
                         <h5 class="mb-3">Soil Testing</h5>
-                        <a href="./popular_service_option.php">
-                            <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="bg-light services-item p-2">
-                        <div class="d-flex" style="align-items: center; justify-content: center;">
-                            <div class="mb-4 services-inner-icon p-1">
-                                <img src="./img/service/s3.jpg" class="service_img" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-3">Chemical Medicine</h5>
                         <a href="./popular_service_option.php">
                             <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
                         </a>
@@ -243,7 +243,7 @@ require './components/head.php';
     </div>
     <!-- Blog End -->
 
-    
+
 
     <!-- Contact Start -->
     <div class="container-fluid py-5 pb-0">
@@ -288,19 +288,19 @@ require './components/head.php';
     <!-- Contact End -->
 
     <script>
-    // Check if accessToken exists in localStorage
-    const accessToken = localStorage.getItem("accessToken");
+        // Check if accessToken exists in localStorage
+        const accessToken = localStorage.getItem("accessToken");
 
-    // If accessToken exists, show Profile link and hide Login link
-    if (accessToken) {
-        document.getElementById("profileLink").style.display = "flex";
-        document.getElementById("loginLink").style.display = "none";
-    } else {
-        // If no accessToken, show Login link and hide Profile link
-        document.getElementById("loginLink").style.display = "flex";
-        document.getElementById("profileLink").style.display = "none";
-    }
-</script>
+        // If accessToken exists, show Profile link and hide Login link
+        if (accessToken) {
+            document.getElementById("profileLink").style.display = "flex";
+            document.getElementById("loginLink").style.display = "none";
+        } else {
+            // If no accessToken, show Login link and hide Profile link
+            document.getElementById("loginLink").style.display = "flex";
+            document.getElementById("profileLink").style.display = "none";
+        }
+    </script>
 
     <?php require './components/footer.php' ?>
 

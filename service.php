@@ -62,6 +62,19 @@ require './components/head.php' ?>
                     <div class="bg-light services-item p-2">
                         <div class="d-flex" style="align-items: center; justify-content: center;">
                             <div class="mb-4 services-inner-icon p-1">
+                                <img src="./img/service/s1.jpg" class="service_img" alt="">
+                            </div>
+                        </div>
+                        <h5 class="mb-3">Buying Crops</h5>
+                        <a href="./buying.php">
+                            <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="bg-light services-item p-2">
+                        <div class="d-flex" style="align-items: center; justify-content: center;">
+                            <div class="mb-4 services-inner-icon p-1">
                                 <img src="./img/service/s2.jpg" class="service_img" alt="">
                             </div>
                         </div>
@@ -96,7 +109,8 @@ require './components/head.php' ?>
                             <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
                         </a>
                     </div>
-                </div><div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
+                </div>
+                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="bg-light services-item p-2">
                         <div class="d-flex" style="align-items: center; justify-content: center;">
                             <div class="mb-4 services-inner-icon p-1">
@@ -104,45 +118,6 @@ require './components/head.php' ?>
                             </div>
                         </div>
                         <h5 class="mb-3">Weather Forecast</h5>
-                        <a href="./popular_service_option.php">
-                            <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="bg-light services-item p-2">
-                        <div class="d-flex" style="align-items: center; justify-content: center;">
-                            <div class="mb-4 services-inner-icon p-1">
-                                <img src="./img/service/s2.jpg" class="service_img" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-3">Soil Testing</h5>
-                        <a href="./popular_service_option.php">
-                            <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="bg-light services-item p-2">
-                        <div class="d-flex" style="align-items: center; justify-content: center;">
-                            <div class="mb-4 services-inner-icon p-1">
-                                <img src="./img/service/s3.jpg" class="service_img" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-3">Chemical & Medicine</h5>
-                        <a href="./popular_service_option.php">
-                            <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="bg-light services-item p-2">
-                        <div class="d-flex" style="align-items: center; justify-content: center;">
-                            <div class="mb-4 services-inner-icon p-1">
-                                <img src="./img/service/s4.jpg" class="service_img" alt="">
-                            </div>
-                        </div>
-                        <h5 class="mb-3">Pesticides & Fertilizers</h5>
                         <a href="./popular_service_option.php">
                             <button type="button" class="btn btn-primary border-0 rounded-pill px-3 py-2">View</button>
                         </a>
